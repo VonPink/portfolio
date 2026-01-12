@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
 
 :root {
-    --cor-primaria: #0d0d0d;
-    --cor-secundaria: #8b0000;
-    --cor-terciaria: #c00000;
-    --cor-hover: #272727;
-    --cor-rodape: #1a1a1a;
+    --cor-um: #EAE0CF;
+    --cor-dois: #213448;
+    --cor-tres: #547792;
+    --cor-quatro: #94B4C1;
 
-    --fonte-title: "Honk", system-ui;
+    --fonte-title: "Atkinson Hyperlegible Mono", sans-serif;
     --fonte-principal: "Poetsen One", sans-serif;
 }
 
@@ -19,10 +18,11 @@
 }
 
 body {
-    background-color: var(--cor-primaria);
-    color: var(--cor-secundaria);
+    background-color: var(--cor-um);
+    color: var(--cor-dois);
     font-family: var(--fonte-principal);
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ====== CABEÇALHO ====== */
@@ -40,13 +40,13 @@ body {
 .cabecalho__menu__link {
     font-size: clamp(1rem, 1.8vw, 1.125rem);
     font-weight: 400;
-    color: var(--cor-terciaria);
+    color: var(--cor-tres);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .cabecalho__menu__link:hover {
-    color: var(--cor-secundaria);
+    color: var(--cor-dois);
 }
 
 /* ====== CONTEÚDO ====== */
@@ -61,7 +61,7 @@ body {
 
 .conteudo__texto {
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -74,7 +74,7 @@ body {
     font-weight: 400;
     font-style: normal;
     font-variation-settings: "MORF" 15, "SHLN" 50;
-    color: var(--cor-terciaria);
+    color: var(--cor-tres);
 }
 
 .conteudo__texto__paragrafo {
@@ -103,8 +103,8 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0.8rem;
-    border: 3px outset var(--cor-secundaria);
-    color: var(--cor-secundaria);
+    border: 3px outset var(--cor-dois);
+    color: var(--cor-dois);
     text-align: center;
     border-radius: 8px;
     font-size: clamp(1rem, 2.5vw, 1.5rem);
@@ -115,8 +115,15 @@ body {
     transition: all 0.3s ease;
 }
 
+.botoes-centralizados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
 .conteudo__botoes__link:hover {
-    background-color: var(--cor-hover);
+    background-color: var(--cor-quatro);
     transform: translateY(-3px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
@@ -143,28 +150,18 @@ body {
 
 /* ====== CERTIFICADOS ====== */
 .conteudo__certificado {
-    color: var(--cor-secundaria);
+    color: var(--cor-dois);
     list-style-position: inside;
 }
 
 .conteudo__certificado__link {
     text-decoration: none;
-    color: var(--cor-terciaria);
+    color: var(--cor-tres);
     transition: color 0.3s ease;
 }
 
 .conteudo__certificado__link:hover {
-    color: var(--cor-secundaria);
-}
-
-/* ====== RODAPÉ ====== */
-.rodape {
-    text-align: center;
-    font-size: clamp(1rem, 1.8vw, 1.125rem);
-    background-color: var(--cor-rodape);
-    color: var(--cor-terciaria);
-    padding: 1.5rem;
-    margin-top: 3rem;
+    color: var(--cor-dois);
 }
 
 /* ====== RESPONSIVIDADE ====== */
@@ -215,4 +212,47 @@ body {
     .lucas {
         max-width: 300px;
     }
+}
+
+/* ====== TEMA ESCURO ====== */
+.dark-theme {
+    --cor-um: #121B26;
+    --cor-dois: #EAE0CF;
+    --cor-tres: #D1C7B7;
+    --cor-quatro: #547792;
+}
+
+.theme-switch {
+    width: 52px;
+    height: 28px;
+    position: relative;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.theme-switch label {
+    background: var(--cor-tres);
+    border-radius: 50px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.theme-switch label::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 22px;
+    height: 22px;
+    background: var(--cor-um);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.theme-switch input:checked + label::after {
+    transform: translateX(24px);
 }
