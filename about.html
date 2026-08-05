@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/code.png" type="image/png">
+    <title>portfolio/sobremim</title>
+    <script>
+        (function () {
+            const tema = localStorage.getItem("tema");
+            if (tema === "escuro") {
+                document.documentElement.classList.add("dark-theme");
+                document.documentElement.classList.add("tema-escuro");
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="index.html">Home</a>
+            <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
+            <a class="cabecalho__menu__link" href="curriculo.html">Currículo</a>
+            <a class="cabecalho__menu__link" href="projetos.html">Projetos</a>
+
+            <div class="theme-switch">
+                <input type="checkbox" id="switch-theme">
+                <label for="switch-theme"></label>
+            </div>
+        </nav>
+    </header>
+
+    <main class="conteudo">
+        <section class="conteudo__texto">
+            <h1 class="conteudo__texto__titulo"> Sobre Mim</h1>
+            <p class="conteudo__texto__paragrafo">Estudante de Engenharia de Software com experiência prática de mais de 2.800 horas em suporte técnico de TI,
+manutenção de infraestrutura e desenvolvimento web (HTML5, CSS3, JavaScript, Python). Especialista na resolução de
+chamados, otimização de processos e criação de interfaces responsivas com foco em UX/UI e SEO. Busco posição na área
+de Desenvolvimento de Software / TI para otimizar fluxos de trabalho e entregar soluções computacionais eficientes. </p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

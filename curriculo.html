@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/code.png" type="image/png">
+    <title>portfolio/curriculo</title>
+    <script>
+        (function () {
+            const tema = localStorage.getItem("tema");
+            if (tema === "escuro") {
+                document.documentElement.classList.add("dark-theme");
+                document.documentElement.classList.add("tema-escuro");
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="index.html">Home</a>
+            <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
+            <a class="cabecalho__menu__link" href="curriculo.html">Currículo</a>
+            <a class="cabecalho__menu__link" href="projetos.html">Projetos</a>
+
+            <div class="theme-switch">
+                <input type="checkbox" id="switch-theme">
+                <label for="switch-theme"></label>
+            </div>
+        </nav>
+    </header>
+
+    <main class="conteudo">
+        <section class="conteudo__texto">
+            <h1 class="conteudo__texto__titulo">Currículo</h1>
+            <p class="conteudo__texto__paragrafo">
+                Desenvolvedor Front-End | Estudante de Engenharia de Software
+            </p>
+            <h2 class="conteudo__texto__titulo">Experiências</h2>
+            <ul class="conteudo__texto__paragrafo">
+                <li> INSS (05/2024 - 05/2026)
+                    <ul>
+                        <li>Executou manutenção preventiva e corretiva em microcomputadores e periféricos, reduzindo o tempo de inatividade das estações de trabalho.</li>
+                        <li>Prestou suporte técnico direto e atendimento de chamados, otimizando o fluxo de resolução de problemas operacionais e de software.</li>
+                        <li>Digitalizou e gerenciou documentos institucionais em conformidade total com normas de segurança de dados e sigilo.</li>
+                        <li>Aplicou métodos ágeis na organização de processos internos e alimentação de planilhas de controle durante as 2.880 horas de atuação.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h2 class="conteudo__texto__titulo">FORMAÇÃO</h2>
+            <div class="conteudo__texto__paragrafo">
+            <ul class="conteudo__certificado">
+                <li>
+                    Unicid — Superior em Engenharia de Software<br>
+                    <strong>01/2024 - PREVISÃO DE CONCLUSÃO EM 12/2027</strong><br>
+                    Foco em programação, banco de dados, engenharia de requisitos e metodologias ágeis.
+                </li>
+                <li>
+                    Alura — Curso de Desenvolvimento Front-End<br>
+                    <strong>04/2025 - 04/2026</strong><br>
+                    Aprendizado prático focado em HTML, CSS e JavaScript, com ênfase no desenvolvimento de projetos para consolidação dos fundamentos de front-end.
+                </li>
+                <li>
+                    Fundação Bradesco — Curso de Linguagem de Programação Python<br>
+                    <strong>2024</strong><br>
+                    Aprendizado teórico e prático sobre fundamentos da linguagem Python em nível básico.
+                </li>
+            </ul>
+            </div>
+            <h2 class="conteudo__botoes__subt"> Acesse meu currículo em PDF:</h2>
+            <div class="botoes-centralizados">
+                <a class="conteudo__botoes__link" href="assets/Curriculo_08-26.pdf">
+                    <img id="icon-cv" src="assets/cv.png" alt="Currículo">
+                    Currículo
+                </a>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

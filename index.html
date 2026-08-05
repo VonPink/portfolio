@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/code.png" type="image/png">
+    <title>portfolio/home</title>
+    <script>
+        (function () {
+            const tema = localStorage.getItem("tema");
+            if (tema === "escuro") {
+                document.documentElement.classList.add("dark-theme");
+                document.documentElement.classList.add("tema-escuro");
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="index.html">Home</a>
+            <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
+            <a class="cabecalho__menu__link" href="curriculo.html">Currículo</a>
+            <a class="cabecalho__menu__link" href="projetos.html">Projetos</a>
+
+            <div class="theme-switch">
+                <input type="checkbox" id="switch-theme">
+                <label for="switch-theme"></label>
+            </div>
+        </nav>
+    </header>
+
+    <main class="conteudo">
+        <section class="conteudo__texto"> 
+            <h1 class="conteudo__texto__titulo">Seja bem vindo ao meu Portfolio!</h1> 
+            <p class="conteudo__texto__paragrafo">Olá! Meu nome é Lucas, tenho 21 anos e sou apaixonado por tecnologia e desenvolvimento front-end.</p>
+            <div class="conteudo__botoes">
+                <h2 class="conteudo__botoes__subt">acesse minhas redes:</h2>
+                <a class="conteudo__botoes__link" href="https://github.com/VonPink">
+                    <img id="icon-github" src="assets/github.png" alt="GitHub">
+                    Github
+                </a>
+                <a class="conteudo__botoes__link" href="https://wa.me/5511958179186">
+                    <img id="icon-whatsapp" src="assets/whatsapp.png" alt="WhatsApp">
+                    Whatsapp
+                </a>
+                <a class="conteudo__botoes__link" href="https://www.linkedin.com/in/lucas-almeida-rosa-787ab2294">
+                    <img id="icon-linkedin" src="assets/linkedin.png" alt="LinkedIn">
+                    LinkedIn
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

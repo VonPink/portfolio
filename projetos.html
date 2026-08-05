@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/code.png" type="image/png">
+    <title>portfolio/projetos</title>
+    <script>
+        (function () {
+            const tema = localStorage.getItem("tema");
+            if (tema === "escuro") {
+                document.documentElement.classList.add("dark-theme");
+                document.documentElement.classList.add("tema-escuro");
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="index.html">Home</a>
+            <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
+            <a class="cabecalho__menu__link" href="curriculo.html">Currículo</a>
+            <a class="cabecalho__menu__link" href="projetos.html">Projetos</a>
+
+            <div class="theme-switch">
+                <input type="checkbox" id="switch-theme">
+                <label for="switch-theme"></label>
+            </div>
+        </nav>
+    </header>
+
+    <main class="conteudo">
+        <section class="conteudo__texto">
+            <h1 class="conteudo__texto__titulo">Projetos</h1>
+            <p class="conteudo__texto__paragrafo">Aqui estão alguns dos meus projetos:</p>
+            <div class="botoes-centralizados">
+                <a class="conteudo__botoes__link" href="https://aluraplus-two-opal.vercel.app/">Alura+</a>
+                <a class="conteudo__botoes__link" href="https://alura-books-six-lyart.vercel.app/">Alura Books</a>
+                <a class="conteudo__botoes__link" href="https://alura-midi-gold-psi.vercel.app/">Alura Midi</a>
+                <a class="conteudo__botoes__link" href="http://fokus-rho-gilt.vercel.app">FOKUS</a>
+                <a class="conteudo__botoes__link" href="https://robotron-3000-xi.vercel.app/">ROBOTRON 3000</a>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
